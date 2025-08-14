@@ -1,0 +1,25 @@
+body {
+    background-color: rgb(196, 237, 255)
+}
+.countdownBox {
+    transition: transform 2s ease-in-out;
+    transform: rotate(360deg);
+    transform-origin: center center;
+    background-color: rgba(255, 32, 32, 0.403);
+    display: inline-block;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.5);
+}
+.countdown {
+    background-color: rgba(255, 33, 48, 0.542);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+}
+
+.test{
+    font-size: 55px;
+}
