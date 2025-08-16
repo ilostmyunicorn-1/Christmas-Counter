@@ -10,33 +10,68 @@
     <div class="hero">
         <div class="container">
             <div class="clock">
+                <span id="months">00</span>
+                <span>:</span>
+                <span id="days">00</span>
+                <span>:</span>
                 <span id="hrs">00</span>
                 <span>:</span>
                 <span id="min">00</span>
                 <span>:</span>
                 <span id="sec">00</span>
-                <span>:</span>
-                <span id="mil">00</span>
 
             </div>
         </div>
     </div>
 
     <script>
+        const month = document.getElementById('months');
+        const day = document.getElementById('days');
+        const hrs = document.getElementById('hrs');
+        const min = document.getElementById('min');
+        const sec = document.getElementById('sec');
 
-        let hrs = document.getElementById('hrs');
-        let min = document.getElementById('min');
-        let sec = document.getElementById('sec');
-        let mil = document.getElementById('mil');
+        let targetDate = new Date("December 25 2025 00:00:00");
+
+
+        const calendarDiff = (targetDate, currentDate) => {
+            let y = targetDate.getFullYear() - currentDate.getFullYear();
+            let m = targetDate.getMonth() - currentDate.getMonth();
+            let d = targetDate.getDate() - currentDate.getDate();
+            let h = targetDate.getHours() - currentDate.getHours();
+            let i = targetDate.getMinutes() - currentDate.getMinutes();
+            let s = targetDate.getSeconds() - currentDate.getSeconds();
+            if (s<0) {s += 60; i--;};
+            if (i<0) {i += 60; h--;};
+            if (h<0) {h += 24; d--;};
+            if (d<0) {
+                const daysInPrevMonth = new Date(targetDate.getFullYear(), targetDate.getMonth(),0).getDate();
+                d += daysInPrevMonth; m--;};
+            if (m<0) {m += 12; y--;};
+                return {
+                    years: y,
+                    months: m,
+                    days: d,
+                    hours: h,
+                    minutes: i,
+                    seconds: s,
+                       }
+        }
 
         setInterval(() => {
-        let currentTime = new Date();
+        const currentDate = new Date();
+        const distance = calendarDiff(targetDate, currentDate);
 
-        hrs.innerHTML = currentTime.getHours().toString().padStart(2,"0");
-        min.innerHTML = currentTime.getMinutes().toString().padStart(2,"0");
-        sec.innerHTML = currentTime.getSeconds().toString().padStart(2,"0");
-        mil.innerHTML = currentTime.getMilliseconds().toString().padStart(3,"0");
-        }, 1);
+        month.textContent = String(distance.months).padStart(2,'0');
+        day.innerHTML = String(distance.days).padStart(2,'0');
+        hrs.innerHTML = String(distance.hours).padStart(2,'0');
+        min.innerHTML = String(distance.minutes).padStart(2,'0');
+        sec.innerHTML = String(distance.seconds).padStart(2,'0');
+
+        if (currentDate >= targetDate){
+            targetDate = new Date(targetDate.getFullYear() + 1, 11, 25, 0, 0, 0);
+        }
+        },1000);
 
     </script>
 </body>

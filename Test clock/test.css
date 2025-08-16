@@ -42,6 +42,12 @@
     left: 50%;
     transform: translateX(-50%);
 }
+#months::after {
+    content: 'MONTHS';
+}
+#days::after {
+    content: 'DAYS';
+}
 #hrs::after {
     content: 'HOURS';
 }
