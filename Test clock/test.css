@@ -6,7 +6,7 @@
 .hero {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(45deg, #08001f, #30197d);
+    background: linear-gradient(45deg, rgb(25, 30, 45), rgb(25, 145, 45));
     color: #fff;
     position: relative;
 }
@@ -21,7 +21,7 @@
 .clock {
     width: 100%;
     height: 100%;
-    background: rgba(234, 0, 255, 0.11);
+    background: rgba(3, 218, 242, 0.11);
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -68,7 +68,7 @@
     content: '';
     width: 180px;
     height: 180px;
-    background: #f41b75;
+    background: #007A00;
     border-radius: 5px;
     position: absolute;
     left: -50px;
@@ -81,7 +81,7 @@
     content: '';
     width: 180px;
     height: 180px;
-    background: #419aff;
+    background: #B22222;
     border-radius: 50%;
     position: absolute;
     right: -30px;
