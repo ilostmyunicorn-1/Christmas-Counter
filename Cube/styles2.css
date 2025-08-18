@@ -1,0 +1,65 @@
+@keyframes rotateCube {
+    0% {transform: rotateX(0deg) rotateY(0deg);}
+    100% {transform: rotateX(360deg) rotateY(360deg);}
+}
+
+.front,.back,.top,.bottom,.left,.right {
+width: 500px;
+height: 500px;
+}
+.front {
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    transform: translateZ(250px);
+}
+.back {
+    background-color: rgb(245, 245, 245);
+    position: absolute;
+    transform: translateZ(-250px);
+}
+.top {
+    background-color: rgb(250, 250, 250);
+    position: absolute;
+    transform:  translateY(-250px) rotateX(90deg);
+
+}
+.bottom {
+    background-color: rgb(240, 240, 240);
+    position: absolute;
+    transform: translateY(250px) rotateX(-90deg);
+
+}
+.left {
+    background-color: rgb(225, 225, 225);
+    position: absolute;
+    transform: translateX(-250px) rotateY(-90deg);
+
+}
+.right {
+    background-color: rgb(230, 230, 230);
+    position: absolute;
+    transform:translateX(250px) rotateY(90deg);
+
+}
+
+.container {
+    transform-style: preserve-3d;
+    position: relative;
+    width: 500px;
+    height: 500px;
+    animation: rotateCube 10s infinite linear;
+}
+
+.scene {
+  perspective: 1000px;
+  width: 500px;
+  height: 500px;
+  margin: 40px auto;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: black;
+}
