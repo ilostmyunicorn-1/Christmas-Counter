@@ -22,11 +22,22 @@ taskBtn.addEventListener('click', () => {
     paragraph.textContent = input.value;
 
     const deleteBtn = document.createElement('button');
-    deleteBtn.textContent = "Delete";
+   // deleteBtn.textContent = "Delete";
+        const img = document.createElement('img');
+        img.src = 'cancel.svg';
+        img.alt = 'Delete';
+        img.width = 20;
+        img.height = 20;
+    deleteBtn.appendChild(img);
     deleteBtn.classList.add('delete');
+
+    //Event Listener
     deleteBtn.addEventListener('click', () => {
     newDiv.remove();
 })
+    checkbox.addEventListener('change', () => {
+    paragraph.classList.toggle('completed');
+    })
 
     newDiv.appendChild(checkbox);
     newDiv.appendChild(paragraph);
