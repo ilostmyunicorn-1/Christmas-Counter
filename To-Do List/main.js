@@ -22,7 +22,6 @@ taskBtn.addEventListener('click', () => {
     paragraph.textContent = input.value;
 
     const deleteBtn = document.createElement('button');
-   // deleteBtn.textContent = "Delete";
         const img = document.createElement('img');
         img.src = 'cancel.svg';
         img.alt = 'Delete';
