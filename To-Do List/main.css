@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body,html {
+    background: rgb(255, 235, 170);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    position: relative;
+    top: 1em;
+    display: flex;
+    justify-content: center;
+    height: 95vh;
+    width: 39vw;
+    background: white;
+    border-radius: 0;
+    border-radius: 20px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: auto;
+    height: 93vh;
+    width: 38vw;
+    background:rgb(124, 200, 255);
+    border-radius: 20px;
+}
+.task {
+    position: relative;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding-top: 3px;
+    left: 14vw;
+    top: 5vh;
+    font-size: 16px;
+    height: 1.5em;
+    width: 5em;
+    border: none;
+    border-radius: 5px;
+    background-image: linear-gradient(rgb(255, 196, 0) 60%, rgb(255, 115, 0) 90%)
+}
+.task:active {
+    background-image: linear-gradient(rgb(235, 176, 0) 60%, rgb(255, 115, 0) 90%)
+}
+.task:hover {
+    cursor: pointer;
+}
+h1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.tasks {
+    display: flex;
+    flex-direction: column;
+}
+
+.newTask {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 34em;
+    height: 4em;
+    background: rgba(255, 255, 255, 0.873);
+    border-radius: 25px;
+    margin-bottom: 1em;
+}
+.paragraph,.checkbox,.delete {
+    display: flex;
+    margin: 1.5em;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.paragraph {
+    font-style: ;
+}
+.delete {
+    border: none;
+    color: blue;
+    background: transparent;
+}
+.delete:hover {
+    cursor: pointer;
+}
+.input {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    outline: none;
+    border: none;
+    border-radius: 26px;
+    width: 20em;
+    height: 2.5em;
+    
+}
+
+
+
+.hidden {
+    display: none;
+}
