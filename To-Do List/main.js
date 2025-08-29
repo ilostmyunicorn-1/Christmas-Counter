@@ -1,14 +1,26 @@
 const taskBtn = document.querySelector(".task");
 const taskDiv = document.querySelector(".tasks");
 const container = document.querySelector(".container");
+const header = document.getElementById("header");
 
 let id = 0;
 
 
 taskBtn.addEventListener('click', () => {
+    
     const input = document.querySelector(".input");
+    const err = document.querySelector('.error');
     console.log(input.value);
+    if(!input.value){
 
+    if (!err){
+    const newError = document.createElement('p');
+    newError.textContent = "Please enter a task.";
+    newError.classList.add('error');
+    header.after(newError);
+    }
+} else {
+    if(err) err.remove();
     const newDiv = document.createElement('div');
     newDiv.classList.add('newTask');
     newDiv.setAttribute('id',id);
@@ -44,4 +56,5 @@ taskBtn.addEventListener('click', () => {
     taskDiv.appendChild(newDiv);
     input.value = "";
     id++;
+}
 });
