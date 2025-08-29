@@ -1,12 +1,24 @@
 const taskBtn = document.querySelector(".task");
-const taskDiv = document.querySelector(".tasks");
+const taskDiv = document.querySelector(".section3");
 const container = document.querySelector(".container");
 const header = document.getElementById("header");
-
+const input = document.querySelector('input');
 let id = 0;
 
+input.addEventListener('keydown', (e) => {
+    if (e.key === "Enter"){
+        runInput();
+    }
+    return;
+})
 
 taskBtn.addEventListener('click', () => {
+    runInput();
+});
+
+//Perfect example of function hoisting. Arrow functions are not hoisted (const runInput = () => {} would not hav eworked).
+//So here, I decided to use the old way of function to hoist to the top.
+function runInput(){
     
     const input = document.querySelector(".input");
     const err = document.querySelector('.error');
@@ -57,4 +69,4 @@ taskBtn.addEventListener('click', () => {
     input.value = "";
     id++;
 }
-});
+};
