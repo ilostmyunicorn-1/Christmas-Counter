@@ -66,8 +66,9 @@ body,html {
     display: inline-flex;
     text-align: center;
     justify-content: center;
-    padding-top: 3px;
- 
+    padding: 1% 0%;
+    margin-top: 4%;
+    margin-bottom: 2%;
     font-size: 1em;
     height: auto;
     min-height: 34%;
@@ -127,7 +128,10 @@ h1 {
     border-radius: 26px;
     width: 50%;
     height: 40%;
-    margin: 2em 4em;
+    margin-top: 4%;
+    margin-bottom: 2%;
+    margin-left: 18%;
+    margin-right: 5%;
 }
 
 
