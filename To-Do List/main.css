@@ -6,7 +6,8 @@
 }
 
 body,html {
-    background: rgb(255, 235, 170);
+    background: rgb(255, 235, 170)
+    url(https://grainy-gradients.vercel.app/noise.svg);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -22,7 +23,8 @@ body,html {
     justify-content: center;
     height: 95vh;
     width: 39vw;
-    background: white;
+    background: rgb(152, 85, 3)
+    url(https://grainy-gradients.vercel.app/noise.svg);
     border-radius: 0;
     border-radius: 20px;
 }
@@ -60,8 +62,10 @@ body,html {
 }
 h1 {
     display: flex;
+    position: relative;
     justify-content: center;
     text-align: center;
+    top: em;
 }
 
 .tasks {
